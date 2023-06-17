@@ -12,12 +12,7 @@
 <!--<h1>--><?php //bloginfo( 'name' ); ?><!--</h1>-->
 <!---->
 <!--<div>-->
-<?php
-//wp_nav_menu(array(
-//    'theme_location'=>'primary'
-//))
-//
-//?>
+
 <!---->
 <!--</div>-->
 
@@ -58,23 +53,19 @@
                 </button>
                 <a class="navbar-brand" href="marketing-index.html"><?php the_custom_logo(); ?></a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="marketing-index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="marketing-category.html">Marketing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="marketing-category.html">Make Money</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="marketing-blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="marketing-contact.html">Contact Us</a>
-                        </li>
-                    </ul>
+                    <?php
+                    $args = array(
+                        'container'=> false,
+                        'theme_location'=>'primary',
+                        'depth'         => 1,
+                        'items_wrap'=>'<ul class="%2$s">%3$s</ul>',
+                        'menu_class'=>'navbar-nav mr-auto',
+                        'add_li_class'  => 'nav-item',
+                        'add_a_class'  => 'nav-link',
+                    );
+                    wp_nav_menu($args);
+
+                    ?>
                     <form class="form-inline">
                         <input class="form-control mr-sm-2" type="text" placeholder="How may I help?">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

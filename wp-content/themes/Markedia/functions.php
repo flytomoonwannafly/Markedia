@@ -20,11 +20,6 @@ function markedia_setup(){
 
 add_action('after_setup_theme', 'markedia_setup');
 
-
-
-
-wp_enqueue_style( 'slider', get_template_directory_uri() . '/assets/css/slider.css', false, '1.1', 'all');
-
 function wp_markedia_scripts(){
     wp_enqueue_style('style-css', get_stylesheet_uri());
     wp_enqueue_style('animate', get_template_directory_uri(). '/assets/css/animate.css' );
@@ -47,3 +42,20 @@ function wp_markedia_scripts(){
 
 }
 add_action('wp_enqueue_scripts', 'wp_markedia_scripts');
+function add_additional_class_on_li($classes, $item, $args) {
+    if(isset($args->add_li_class)) {
+        $classes[] = $args->add_li_class;
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+
+function my_nav_link_filter( $atts, $item, $args){
+    if(isset($args->add_a_class)) {
+        $atts['class'] = $args->add_a_class;
+    }
+
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'my_nav_link_filter', 10, 4 );
