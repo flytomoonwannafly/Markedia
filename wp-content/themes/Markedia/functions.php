@@ -1,4 +1,5 @@
 <?php
+include_once 'app/widgets/advertising/advertising_widget.php';
 
 function markedia_setup(){
 
@@ -134,3 +135,20 @@ function markedia_pagination( $args = array() ) {
     if ( isset($echo) )
         echo $args['before_output'] . $echo . $args['after_output'];
 }
+
+/*
+ * Sidebar
+ */
+
+function markedia_widgets_init(){
+        register_sidebar( array(
+            'name'          => __( 'Main Sidebar', 'textdomain' ),
+            'id'            => 'sidebar-1',
+            'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+            'before_widget' => '<div class="widget"> ',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+}
+add_action( 'widgets_init', 'markedia_widgets_init' );
