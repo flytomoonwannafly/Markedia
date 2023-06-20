@@ -1,5 +1,6 @@
 <?php
 include_once 'app/widgets/advertising/advertising_widget.php';
+include_once 'app/widgets/instagram-feed/instagram_feed_widget.php';
 
 function markedia_setup(){
 
