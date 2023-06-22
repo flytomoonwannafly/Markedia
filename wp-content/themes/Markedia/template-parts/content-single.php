@@ -1,11 +1,15 @@
 <div class="page-wrapper">
     <div class="blog-title-area">
-        <ol class="breadcrumb hidden-xs-down">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Blog</a></li>
-            <li class="breadcrumb-item active">The golden rules you need to know for a positive life</li>
-        </ol>
-
+        <?php
+        if ( function_exists('yoast_breadcrumb') ) {
+            $breadcrumbs = yoast_breadcrumb( '<p id="breadcrumbs">','</p>', false );
+            $breadcrumbs = preg_replace( '/<p[^>]*>/', '<ol class="breadcrumb hidden-xs-down">', $breadcrumbs );
+            $breadcrumbs = str_replace( array( '</p>', '<span', '</span>' ), array( '</ol>', '<li class="breadcrumb-item"', '</a></li>' ), $breadcrumbs );
+            $breadcrumbs = str_replace( '<strong>', '', $breadcrumbs );
+            $breadcrumbs = str_replace( '</strong>', '', $breadcrumbs );
+            echo $breadcrumbs;
+        }
+        ?>
         <span class="color-yellow"><?php the_category(' , ');?></span>
 
         <h3><?php the_title()?></h3>

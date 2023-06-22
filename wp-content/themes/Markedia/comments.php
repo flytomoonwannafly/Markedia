@@ -38,14 +38,15 @@ if (post_password_required()) {
             </div>
         </div>
     </div>
+        <?php if (!comments_open() && get_comments_number()) : ?>
+            <p class="no-comments"><?php _e('Comments are closed.'); ?></p>
+        <?php endif; ?>
+
+    <?php endif; // have_comments() ?>
 </div>
 <hr class="invis1">
 
-<?php if (!comments_open() && get_comments_number()) : ?>
-    <p class="no-comments"><?php _e('Comments are closed.'); ?></p>
-<?php endif; ?>
 
-<?php endif; // have_comments() ?>
 
 <div class="custombox clearfix">
     <h4 class="small-title">Leave a Reply</h4>
