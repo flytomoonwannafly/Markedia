@@ -1,6 +1,7 @@
 <?php
 include_once 'app/widgets/advertising/advertising_widget.php';
 include_once 'app/widgets/instagram-feed/instagram_feed_widget.php';
+include_once 'app/widgets/recent-posts/recent_posts_widget.php';
 
 function markedia_setup(){
 
@@ -15,6 +16,7 @@ function markedia_setup(){
     ));
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(800, 460);
+    add_image_size('markedia_recent_posts', 55, 55, false);
     add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
 
     register_nav_menu('primary', 'Primary menu');
