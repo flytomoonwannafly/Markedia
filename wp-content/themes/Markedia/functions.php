@@ -153,6 +153,24 @@ function markedia_widgets_init(){
             'before_title'  => '<h2 class="widget-title">',
             'after_title'   => '</h2>',
         ) );
+    register_sidebar( array(
+        'name'          => __( 'Footer Sidebar', 'textdomain' ),
+        'id'            => 'footer-sidebar',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+        'before_widget' => '<div class="widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name'          => __( 'Left Sidebar', 'textdomain' ),
+        'id'            => 'left-sidebar',
+        'description'   => __( 'Widgets in this area will be shown on chosen pages.', 'textdomain' ),
+        'before_widget' => '<div class="widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'markedia_widgets_init' );
 
