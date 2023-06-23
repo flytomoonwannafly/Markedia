@@ -1,4 +1,4 @@
-<section id="cta" class="section">
+<section id="cta" class="section" style="background: rgba(0, 0, 0, 0) url(<?php echo get_theme_mod('background_image_header_banner_setting')?>) no-repeat scroll center center / cover" >
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 align-self-center">

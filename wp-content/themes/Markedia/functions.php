@@ -24,6 +24,27 @@ function markedia_setup(){
 
 add_action('after_setup_theme', 'markedia_setup');
 
+function markedia_banner_customize_register($wp_customize) {
+    // Додайте секцію
+    $wp_customize->add_section('background_image_header_banner_section', array(
+        'title' => 'Background Image Banner Header',
+        'priority' => 30
+    ));
+
+    // Додайте поле для вибору зображення
+    $wp_customize->add_setting('background_image_header_banner_setting', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_image_header_banner_control', array(
+        'label' => 'Select an image',
+        'section' => 'background_image_header_banner_section',
+        'settings' => 'background_image_header_banner_setting'
+    )));
+}
+add_action('customize_register', 'markedia_banner_customize_register');
+
 function wp_markedia_scripts(){
     wp_enqueue_style('style-css', get_stylesheet_uri());
     wp_enqueue_style('animate', get_template_directory_uri(). '/assets/css/animate.css' );
