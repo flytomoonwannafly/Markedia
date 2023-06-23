@@ -32,18 +32,20 @@ function wp_markedia_scripts(){
     wp_enqueue_style('font-awesome', get_template_directory_uri(). '/assets/css/font-awesome.min.css' );
     wp_enqueue_style('responsive', get_template_directory_uri(). '/assets/css/responsive.css' );
     wp_enqueue_style('marketing', get_template_directory_uri(). '/assets/css/version/marketing.css' );
+    wp_enqueue_style('font-roboto', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' );
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('tether', get_template_directory_uri(). '/assets/js/tether.min.js');
     wp_enqueue_script('bootstrap', get_template_directory_uri(). '/assets/js/bootstrap.js');
     wp_enqueue_script('animate', get_template_directory_uri(). '/assets/js/animate.js');
     wp_enqueue_script('custom', get_template_directory_uri(). '/assets/js/custom.js');
-
     wp_enqueue_script('food-map', get_template_directory_uri(). '/assets/js/food-map.js');
     wp_enqueue_script('garden-map', get_template_directory_uri(). '/assets/js/garden-map.js');
-
     wp_enqueue_script('masonry', get_template_directory_uri(). '/assets/js/masonry.js');
-
+    wp_enqueue_script('html5shiv', 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js');
+    wp_enqueue_script('respond', 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js');
+    wp_script_add_data('html5shiv', 'conditional', 'lt IE 9');
+    wp_script_add_data('respond', 'conditional', 'lt IE 9');
 }
 add_action('wp_enqueue_scripts', 'wp_markedia_scripts');
 function add_additional_class_on_li($classes, $item, $args) {
@@ -76,7 +78,7 @@ function markedia_pagination( $args = array() ) {
         'previous_string' => __( 'Previous', 'text-domain' ),
         'next_string'     => __( 'Next', 'text-domain' ),
         'before_output'   => '<nav aria-label="Page navigation"><ul class="pagination justify-content-center">',
-        'after_output'    => '</ul></div>'
+        'after_output'    => '</ul>'
     );
 
     $args = wp_parse_args(
