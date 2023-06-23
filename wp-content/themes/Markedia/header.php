@@ -36,11 +36,6 @@
 
                     ?>
                     <?php get_search_form(); ?>
-
-<!--                    <form class="form-inline">-->
-<!--                        <input class="form-control mr-sm-2" type="text" placeholder="How may I help?">-->
-<!--                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-<!--                    </form>-->
                 </div>
             </nav>
         </div><!-- end container-fluid -->
