@@ -1463,7 +1463,13 @@ hr.invis3 {
 .blog-list-widget .w-100.last-item {
     margin-bottom: 0;
 }
-
+.w-100 h5{
+    margin-top: 0;
+}
+img.wp-post-image{
+    width: 55px;
+    height: 55px;
+}
 .blog-list-widget .mb-1 {
     font-size: 16px;
     font-weight: 500;

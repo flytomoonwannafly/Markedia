@@ -34,7 +34,9 @@
     </div><!-- end media -->
 
     <div class="blog-content">
+        <div class="pp">
         <?php the_content();?>
+        </div>
     </div><!-- end content -->
     <div class="blog-title-area">
         <div class="tag-cloud-single">

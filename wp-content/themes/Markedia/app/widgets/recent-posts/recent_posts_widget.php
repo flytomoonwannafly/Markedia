@@ -77,7 +77,6 @@ class recent_posts_widget extends WP_Widget
         <div class="list-group">
             <?php foreach ( $r->posts as $recent_post ) : ?>
                 <?php
-//            var_dump($recent_post);
                 $post_title   = get_the_title( $recent_post->ID );
                 $title        = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)' );
                 $aria_current = '';
