@@ -21,7 +21,7 @@ if (post_password_required()) {
 <div class="custombox clearfix">
 
     <?php if (have_comments()) : ?>
-    <h4 class="small-title"><?php echo wp_count_comments()->approved; ?> Comments</h4>
+    <h4 class="small-title"><?php echo get_comments_number(get_the_ID()); ?> Comments</h4>
     <div class="row">
         <div class="col-lg-12">
             <div class="comments-list">
