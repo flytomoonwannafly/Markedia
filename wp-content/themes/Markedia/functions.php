@@ -343,3 +343,4 @@ function customize_gravityforms_1_container($field_container, $field, $form, $cs
 add_filter('gform_field_container', 'customize_gravityforms_1_container', 10, 6);
 
 add_filter('pre_option_rg_gforms_disable_css', '__return_true');
+

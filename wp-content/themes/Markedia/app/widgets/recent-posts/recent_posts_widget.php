@@ -87,7 +87,12 @@ class recent_posts_widget extends WP_Widget
                 ?>
                 <a href="<?php the_permalink( $recent_post->ID ); ?>" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="w-100 justify-content-between">
-                        <?php echo get_the_post_thumbnail($recent_post->ID, 'markedia_recent_posts', array( 'class' => 'img-fluid float-left' ))?>
+                        <?php  if(!has_post_thumbnail($recent_post->ID)){
+                            $default_image_url = get_template_directory_uri(). '/assets/images/market_blog_02.jpg';
+                          echo '<img class="img-fluid float-left recent-post" src="'. $default_image_url  . '">';
+                        }
+                        else{
+                        echo get_the_post_thumbnail($recent_post->ID,'markedia_recent_posts', array( 'class' => 'img-fluid float-left recent-post' ));}?>
                         <h5 class="mb-1"><?php echo $title; ?></h5>
                         <?php if ( $show_date ) : ?>
                         <small><?php echo get_the_date( 'j F Y', $recent_post->ID ); ?></small>

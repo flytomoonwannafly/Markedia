@@ -1,8 +1,7 @@
 <div class="blog-box wow fadeIn">
     <div class="post-media">
         <a href="<?php the_permalink();?>" title="">
-            <img src="<?php the_post_thumbnail_url(array(634, 364)); ?>" alt="" class="img-fluid">
-
+            <?php the_post_thumbnail('markedia_all_posts', array('class' => 'img-fluid')) ?>
             <div class="hovereffect">
                 <span></span>
             </div>
@@ -23,6 +22,5 @@
         <small><a href="marketing-category.html" title=""><?php the_category(' , ');?></a></small>
         <small><a href="marketing-single.html" title=""><?php the_time('j F Y'); ?></a></small>
         <small><a href="#" title="">BY <?php the_author()?></a></small>
-        <small><a href="#" title=""><i class="fa fa-eye"></i> 2291</a></small>
     </div><!-- end meta -->
 </div><!-- end blog-box -->

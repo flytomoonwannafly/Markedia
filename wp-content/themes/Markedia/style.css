@@ -685,7 +685,7 @@ div.tab button:hover {
 
 .dmtop {
     background-color: #111111;
-    background-image: url(images/arrow.png);
+    background-image: url(assets/images/arrow.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 9999;
@@ -1472,7 +1472,7 @@ hr.invis3 {
 .w-100 h5{
     margin-top: 0;
 }
-img.wp-post-image{
+img.recent-post{
     width: 55px;
     height: 55px;
 }
