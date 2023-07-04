@@ -2,10 +2,16 @@
 
     File Name: style.css
     Template Name: Markedia
-    Created By: HTML.Design
-    http://themeforest.net/user/wpdestek
-
-**************************************/
+    Theme Name: Markedia
+    Theme URI: https://www.free-css.com/free-css-templates/page244/markedia
+    Author: HTML.Design
+    Author URI: http://themeforest.net/user/wpdestek
+    Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+    Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+    Version: 1.0
+    Requires PHP: 8.1
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: markedia
 
 /**************************************
     Table of Content
@@ -679,7 +685,7 @@ div.tab button:hover {
 
 .dmtop {
     background-color: #111111;
-    background-image: url(images/arrow.png);
+    background-image: url(assets/images/arrow.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 9999;
@@ -1466,7 +1472,7 @@ hr.invis3 {
 .w-100 h5{
     margin-top: 0;
 }
-img.wp-post-image{
+img.recent-post{
     width: 55px;
     height: 55px;
 }
