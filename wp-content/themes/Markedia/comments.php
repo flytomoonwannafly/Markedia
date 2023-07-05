@@ -32,7 +32,7 @@ if (post_password_required()) {
                     'avatar_size' => 80,
                     'max_depth'=>2,
                     'reply_class'=> 'custom-reply-link',
-                    'callback'=>'markedia_comments_list'
+                    'callback'=>'\Theme\Markedia\WP_Comment::markedia_comments_list'
                 ));
                 ?>
             </div>

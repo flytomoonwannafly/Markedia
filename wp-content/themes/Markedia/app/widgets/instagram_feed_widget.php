@@ -36,6 +36,7 @@ class instagram_feed_widget extends WP_Widget
             }
 
             echo '</ul>';
+            echo '</div>';
         }
         echo $args['after_widget'];
 
@@ -85,7 +86,7 @@ class instagram_feed_widget extends WP_Widget
     {
 //        wp_enqueue_script('media-upload');
         wp_enqueue_media();
-        wp_enqueue_script('insta_scripts', get_template_directory_uri() . '/app/widgets/instagram-feed/instagram-feed.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('insta_scripts', get_template_directory_uri() . '/assets/admin-dashboard/instagram-feed.js', array('jquery'), '1.0', true);
     }
 }
 
