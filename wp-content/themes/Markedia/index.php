@@ -1,3 +1,4 @@
+<?php use Theme\Markedia\WP_Pagination; ?>
 <?php get_header() ?>
 
     <?php get_template_part('template-parts/header-banner') ?>
@@ -25,7 +26,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <?php markedia_pagination() ?>
+                            <?php WP_Pagination::markedia_pagination() ?>
                         </div><!-- end col -->
                     </div><!-- end row -->
                 </div><!-- end col -->

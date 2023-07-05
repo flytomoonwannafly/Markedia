@@ -78,7 +78,7 @@ class advertising_widget extends WP_Widget
     {
         wp_enqueue_script('media-upload');
         wp_enqueue_media();
-        wp_enqueue_script('our_admin', get_template_directory_uri() . '/app/widgets/advertising/advertising.js', array('jquery'));
+        wp_enqueue_script('our_admin', get_template_directory_uri() . '/assets/admin-dashboard/advertising.js', array('jquery'));
     }
 }
 
